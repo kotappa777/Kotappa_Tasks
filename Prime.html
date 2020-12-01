@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Prime number</title>
+</head>
+
+<body>
+    <p>Prime number between 1 to 100:</p>
+<script>
+
+    var n = 0, num = 0, count;
+    for(var i=1; i<=100; i++)
+    {
+        count = 0;
+        for( var num=1; num<=i; num++)
+        {
+        if(i%num == 0)
+        {
+            count++;
+        }
+    }
+    
+    if(count == 2)
+    {
+        document.write( i+" ");
+    }
+    }
+    
+
+</script>
+
+</body>
+</html>
