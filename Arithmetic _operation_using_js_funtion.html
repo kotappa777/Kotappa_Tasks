@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>'
+<head>
+    <title>Arithmetic _operation_using_js_funtion</title>
+</head>
+<body>
+
+<h2>Arithmetic operation using js funtion</h2>
+<button onclick="Add(10, 20)"><b>Add</b></button>
+<label>A value + B value=<span id="Add"></span></label><br>
+<button onclick="Sub(10, 20)"><b>Sub</b></button>
+<label>A value - B value = <span id="Sub"></span></label><br>
+<button onclick="Mul(10, 20)"><b>Mul</b></button>
+<label>A value * B value =<span id="Mul"></span></label><br>
+<button onclick="Div(10, 3)"><b>Div</b></button>
+<label>A value % B value=<span id="Div"></span></label><br>
+
+
+<script>
+    function Add (a,b)
+    {
+        var result = a + b;
+        document.getElementById("Add").innerHTML = result;
+    }
+    function Sub (a,b)
+    {
+        var result1 = a - b;
+        document.getElementById("Sub").innerHTML = result1;
+    }
+    function Mul (a,b)
+    {
+        var result2 = a * b;
+        document.getElementById("Mul").innerHTML = result2;
+    }
+    function Div (a,b)
+    {
+        var result3 = a / b;
+        document.getElementById("Div").innerHTML = result3;
+    }
+</script>
+                      
+
+</body>
+</html>
