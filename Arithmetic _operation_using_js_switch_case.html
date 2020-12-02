@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>'
+<head>
+    <title>Arithmetic _operation_using_js_switch_case</title>
+</head>
+<body>
+<h2>Arithmetic operation using js switch case</h2>
+<script>
+var operator = prompt('Please enter the operator symbol to perform: ');
+var a = 10;
+var b = 20;
+var result;
+
+switch(operator) {
+    case '+':
+         result = a + b;
+        document.write(result);
+        break;
+case '-':
+        result = a - b;
+        document.write(result);
+        break;
+
+    case '*':
+        result = a * b;
+        document.write(result);
+        break;
+
+    case '/':
+        result = a / b;
+        document.write(result);
+        break;
+
+    default:
+        console.log('Check the operator symbol');
+        break;
+}
+</script>
+</body>
+</html>
