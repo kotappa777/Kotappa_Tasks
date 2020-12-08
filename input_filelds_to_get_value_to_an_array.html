@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Assignments</title>
+    </head>
+    <style>
+        body {
+            background-color: white;
+            padding: 5%;
+        
+        }
+        button {
+            background-color: rgb(201, 245, 201);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        p {
+            color: rgb(230, 21, 21);
+            font-size: 16px;
+        }
+    </style>
+<body>
+    <h3>Input fiels to get a value using array function<h3>
+  <input type="text" name="txt" id="txt"/>
+  <p id="text"></p>
+  <button onclick="add();">Add New Items</button><br>
+  <button onclick="Sort();">Sort</button><br>
+  <button onclick="Delete();">Delete</button><br>
+  <button onclick="Find();">Find</button><br>
+  
+    <script>
+        const months = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sept","Oct"];
+        
+        function add()
+        {
+            let txt = document.getElementById('txt').value;
+            months.push(txt);
+            document.getElementById('text').innerHTML = months;
+        }
+
+        function Sort()
+        {
+            months.sort();
+            document.getElementById('text').innerHTML = months;
+        }
+
+
+        function Delete()
+        {
+             let txt = document.getElementById('txt').value;
+             
+             let index = months.indexOf(txt);
+             
+             if(index !== -1 )
+             {
+                 months.splice(index,1);
+                 document.getElementById('text').innerHTML = months;
+                 alert("The selected element has been deleted")
+             }
+             
+             else{
+                 alert("Please enetr the valid element");
+             }
+        }
+        
+        function Find()
+        {
+            var result = months.findIndex(Find);
+           if (result === "Jan")
+           {
+            document.getElementById('text').innerHTML = result;
+               alert("its found");
+
+           } else{
+              alert('Its not found')
+          } 
+        }
+        document.getElementById('text').innerHTML = months;
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>
