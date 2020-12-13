@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>simple calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="main">
+    <p>Ca<u>lcul</u>ate</p>
+		<form class="Form" name="Form">
+			<div class="screen">
+				<input type="text" name="screen" placeholder="0" class="screen" />
+			</div>
+			<div class="buttons">
+                <div class="row1">
+				<input type="button" name="clear" value="C"  onclick="Clear()" />
+				<input style="width: 200px; height: 59px;" type="button" name="clear" value="Backspace"  onclick="Backspace()" />
+			</div>
+			<div class="row">
+				<input type="button" name="b1" value="1" onclick="Cal(this)" />
+				<input type="button" name="b2" value="2" onclick="Cal(this)" />
+				<input type="button" name="b3" value="3" onclick="Cal(this)" />
+				<input type="button" style="color: rgb(78, 78, 235);" name="Add" value="+" onclick="Cal(this)" />
+			</div>
+			<div class="row">
+				<input type="button" name="b4" value="4" onclick="Cal(this)" />
+				<input type="button" name="b5" value="5" onclick="Cal(this)" />
+				<input type="button" name="b6" value="6" onclick="Cal(this)" />
+				<input type="button" style="color: rgb(78, 78, 235);" name="Sub" value="-" onclick="Cal(this)" />
+			</div>
+			<div class="row">
+				<input type="button" name="b7" value="7" onclick="Cal(this)" />
+				<input type="button" name="b8" value="8" onclick="Cal(this)" />
+				<input type="button" name="b9" value="9" onclick="Cal(this)" />
+				<input type="button" style="color: rgb(78, 78, 235);" name="Mul" value="*" onclick="Cal(this)" />
+			</div>
+			<div class="row">
+				<input type="button" name="b0" value="0" onclick="Cal(this)" />
+                <input type="button" name="div" value="/" onclick="Cal(this)" />
+                <input type="button" name="dot" value="." onclick="Cal(this)" />
+				<input type="button" style="color: rgb(78, 78, 235);" name="equal" value="=" onclick="Calculate()" />
+            </div>
+        </div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function Cal(result)
+		{
+			Form.screen.value += result.value;
+		}
+		function Clear()
+		{
+			Form.screen.value = null;
+		}
+		function Calculate()
+		{
+			Form.screen.value = eval(Form.screen.value);
+		}
+		function Backspace()
+		{
+			var back = Form.screen.value;
+			Form.screen.value = back.substring(0, back.length-1);
+        }
+	</script>
+</body>
+</html>
